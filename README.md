@@ -5,3 +5,6 @@ Vk-miniapps приложение для проекта Самарского ки
 
 
 Стек: frontend: javascript-react,Vkui,Vk-bridge;  backend: flask-restfull, mysql 
+
+
+https://vk.com/app52101863
