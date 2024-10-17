@@ -819,7 +819,7 @@ class selectResults(Resource):
 
 class selectResults2(Resource):
     def get(self, tournir_id,password):
-        if password == 'adminpassword':
+        if password == '':
                 making_excell(tournir_id=tournir_id)
                 dirfiles = os.listdir('/home/Alonikx/python-backend-vkminiapp/excel/')
                 path = f'/home/Alonikx/python-backend-vkminiapp/excel/{dirfiles[0]}'
@@ -1042,7 +1042,7 @@ class ChangeToAdmin(Resource):
             if user['role'] in ['Участник', 'Капитан']:
                 password = request.get_json().get('password')
 
-                if password == f'{user["first_name"]}_{user["last_name"]}_{user["vkid"]}_{user["vkid"]}':
+                if password == 'password':
                     changeroletoadmin(user_id=user_id)
 
                     # Удаление команд, если пользователь был капитаном
